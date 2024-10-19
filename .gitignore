@@ -128,10 +128,6 @@ dist/
 .yarn/install-state.gz
 .pnp.*
 
-# Tailwind CSS
-tailwind.config.js
-postcss.config.js
-
 # Lockfiles
 package-lock.json
 yarn.lock
