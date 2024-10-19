@@ -59,35 +59,35 @@ const Dash: React.FC = () => {
   }, [])
 
   if (loading) {
-    return <p style={{ color: '#FFF' }}>Carregando...</p>
+    return <p className="text-white">Carregando...</p>
   }
 
   if (error) {
-    return <p style={{ color: 'red' }}>{error}</p>
+    return <p className="text-red-500">{error}</p>
   }
 
   return (
-    <div style={styles.container}>
-      <h2 style={styles.title}>Entradas e saídas</h2>
-      <table style={styles.table}>
+    <div className="bg-gray-900 p-6 rounded-lg text-white w-full mx-auto h-[646px] text-center">
+      <h2 className="text-left mb-10 text-2xl">Entradas e saídas</h2>
+      <table className="w-full border-collapse">
         <thead>
           <tr>
-            <th style={styles.header}>Nome</th>
-            <th style={styles.header}>Tipo</th>
-            <th style={styles.header}>Data</th>
-            <th style={styles.header}>Valor</th>
+            <th className="text-white font-bold text-left py-2 border-b border-gray-600">Nome</th>
+            <th className="text-white font-bold text-left py-2 border-b border-gray-600">Tipo</th>
+            <th className="text-white font-bold text-left py-2 border-b border-gray-600">Data</th>
+            <th className="text-white font-bold text-left py-2 border-b border-gray-600">Valor</th>
           </tr>
         </thead>
         <tbody>
           {transactions.map((transaction, index) => (
             <tr key={index}>
-              <td style={styles.cell}>
+              <td className="py-2 text-left border-b border-gray-600">
                 {transaction.name} <br />
-                <span style={styles.email}>{transaction.email}</span>
+                <span className="text-gray-400 text-xs">{transaction.email}</span>
               </td>
-              <td style={styles.cell}>{transaction.type}</td>
-              <td style={styles.cell}>{transaction.date}</td>
-              <td style={styles.cell}>{transaction.amount}</td>
+              <td className="py-2 text-left border-b border-gray-600">{transaction.type}</td>
+              <td className="py-2 text-left border-b border-gray-600">{transaction.date}</td>
+              <td className="py-2 text-left border-b border-gray-600">{transaction.amount}</td>
             </tr>
           ))}
         </tbody>
@@ -95,44 +95,5 @@ const Dash: React.FC = () => {
     </div>
   )
 }
-
-// Definição dos estilos inline, usando 'as const'
-const styles = {
-  container: {
-    backgroundColor: '#09090B',
-    padding: '24px',
-    borderRadius: '8px',
-    color: '#FFF',
-    width: '100%',
-    maxWidth: '658px',
-    height: '646px',
-    margin: '0 auto',
-    textAlign: 'center',
-  },
-  title: {
-    textAlign: 'left',
-    marginBottom: '38px',
-  },
-  table: {
-    width: '100%',
-    borderCollapse: 'collapse',
-  },
-  header: {
-    color: '#FFF',
-    fontWeight: 'bold',
-    textAlign: 'left',
-    padding: '10px 0',
-    borderBottom: '1px solid #333',
-  },
-  cell: {
-    padding: '10px 0',
-    textAlign: 'left',
-    borderBottom: '1px solid #333',
-  },
-  email: {
-    color: '#AAA',
-    fontSize: '12px',
-  },
-} as const // Declaração 'as const'
 
 export default Dash
