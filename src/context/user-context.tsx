@@ -1,7 +1,7 @@
 import { createContext, ReactNode, useCallback, useEffect, useState } from 'react'
 import { UserProps } from '../models/user'
 
-interface UserContextProps {
+export interface UserContextProps {
     users: UserProps[]
 }
 
