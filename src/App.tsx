@@ -8,8 +8,7 @@ export default function App() {
       <Sidebar />
 
       <div className='w-full p-12'>
-        {/* Adicionando o componente Statistics */}
-        <Statistics totalIncome="$1,329.00" totalExpense="$1,329.00" />
+        <Statistics />
         
         <Dash />
       </div>
