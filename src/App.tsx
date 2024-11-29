@@ -1,17 +1,14 @@
+import { TransactionContextProvider } from './context/TransactionContext'
 import Dash from './components/Dash'
-import Sidebar from './components/Sidebar'
 import Statistics from './components/Statistics'
 
 export default function App() {
   return (
-    <div className='flex bg-gray-800'>
-      <Sidebar />
-
-      <div className='w-full p-12'>
+    <TransactionContextProvider>
+      <div className='flex flex-col gap-8 p-12 w-full h-screen bg-gray-800'>
         <Statistics />
-        
         <Dash />
       </div>
-    </div>
+    </TransactionContextProvider>
   )
 }
