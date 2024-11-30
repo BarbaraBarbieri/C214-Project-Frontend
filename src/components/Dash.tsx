@@ -68,10 +68,10 @@ export default function Dash() {
                 {formatCurrency(transaction.value || 0)}
               </td>
               <td className="py-2 text-left border-b border-gray-600 space-x-2">
-                <button onClick={() => handleEdit(transaction)} className="text-gray-500 hover:text-white">
+                <button aria-label='edit-button' onClick={() => handleEdit(transaction)} className="text-gray-500 hover:text-white">
                   <Edit size={20} />
                 </button>
-                <button onClick={() => handleDelete(transaction)} className="text-gray-500 hover:text-white">
+                <button aria-label='delete-button' onClick={() => handleDelete(transaction)} className="text-gray-500 hover:text-white">
                   <Trash2 size={20} />
                 </button>
               </td>

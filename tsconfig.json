@@ -6,6 +6,7 @@
   ],
   "compilerOptions": {
     "jsx": "react-jsx",
+    "module": "esnext",
     "esModuleInterop": true,
   }
 }
