@@ -4,13 +4,12 @@ import Statistics from '../../components/Statistics'
 import { TransactionContext } from '../../context/TransactionContext'
 import { TransactionProps } from '../../models/TransactionProps'
 
-// Mock do estado do contexto
 const mockTransactionsSummary = {
   totalIncome: 1500,
   totalOutcome: 300,
 }
 
-const mockTransactions: TransactionProps[] = [ // Tipando como um array de TransactionProps
+const mockTransactions: TransactionProps[] = [
   {
     id: '1',
     title: 'Salário',
